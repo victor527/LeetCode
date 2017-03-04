@@ -6,4 +6,4 @@ echo git add    / add all the modification into next commit
 echo "git add -p <file>"  / add specific file into next commit
 echo git commit -a / commit all the files
 echo git commit -m 'message' / commit with message
-
+echo git push   / push the local into the remote repository
