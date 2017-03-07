@@ -31,6 +31,7 @@ int main()
     nums.push_back(1);
     nums.push_back(2);
     nums.push_back(3);
+    nums.push_back(4);
     cout<< nums[1] << endl;
     vector<vector<int> > result = permute(nums);
     cout<< result.size() << endl;
