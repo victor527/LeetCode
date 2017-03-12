@@ -5,5 +5,6 @@ echo git diff   / shows difference with last commit
 echo git add    / add all the modification into next commit
 echo "git add -p <file>"  / add specific file into next commit
 echo git commit -a / commit all the files
+echo git commit --date="date='2 day ago'" 
 echo git commit -m 'message' / commit with message
 echo git push   / push the local into the remote repository
