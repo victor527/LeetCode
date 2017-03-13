@@ -145,8 +145,8 @@ int ladderLength(string beginWord, string endWord, vector<string>& wordList)
                 return distance;
             for(int i = 0; i < word.size(); i++){
                 char letter = word[i];
-                for(int j = 0; j < 26; j++){
-                    word[i] = 'a' + j;
+                for(char c = 'a'; c <= 'z'; c++){
+                    word[i] = c;
                     if(wList.count(word)){
                         visit.push(word);
                         wList.erase(word);
