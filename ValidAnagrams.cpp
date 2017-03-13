@@ -18,7 +18,7 @@ using namespace std;
 }*/
 
 // Trial 2 with hash map to see whether all the elements can cancel out.
-/*bool isAnagram(string s, string t) {
+bool isAnagram(string s, string t) {
     if(s.size() != t.size()) //Cases when the length of the s and t are not the same.
         return false;
     unordered_map<char, int> mp;
@@ -31,23 +31,11 @@ using namespace std;
             return false;
     }
     return true;
-}*/
-
-bool isAnagram(string s, string t) {
-    int num = 0;
-    for(int i = 0; i < s.size(); i++){
-        num += s[i] ^ t[i];
-    }
-    if(num == 0) return true;
-    else return false;
 }
 
 int main(){
     auto t_start = chrono::high_resolution_clock::now();
     string s = "anagram", t = "nagaram";
-    char a = 'a', b = 'a';
-    int num = b^a;
-    cout << num << endl;
     bool result = isAnagram(s, t);
     cout << result << endl;
     auto t_end = chrono::high_resolution_clock::now();
