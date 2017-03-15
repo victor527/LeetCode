@@ -16,7 +16,7 @@
  * };
  */
 
-// Trial 1 Use a queue to 
+// Trial 1 Use a queue and dfs to find the elements of each integer in the nested list
 class NestedIterator {
 public:
     queue<int> q;
