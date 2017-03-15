@@ -11,13 +11,33 @@ using namespace std;
 
 class Solution {
 public:
-    void rotate(vector<int>& nums, int k) {
+    // Trial 1 with new copy with Time complexity of O(N) and space O(N)
+    /*void rotate(vector<int>& nums, int k) {
         int n = nums.size();
         vector<int> newNums(n);
         for(int i = 0; i < n; i++)
             newNums[i] = nums[i];
         for(int i = 0; i < n; i++)
             nums[(i+k)%n] = newNums[i];
+    }*/
+
+    // Trial 2 with only Time Complexity of O(N) and space of O(1)
+    void rotate(vector<int>& nums, int k) {
+        int n = nums.size();
+        k = k % n;
+    
+        // Reverse the first n - k numbers.
+        // Index i (0 <= i < n - k) becomes n - k - i.
+        reverse(nums.begin(), nums.begin() + n - k);
+        
+        // Reverse tha last k numbers.
+        // Index n - k + i (0 <= i < k) becomes n - i.
+        reverse(nums.begin() + n - k, nums.begin() + n);
+        
+        // Reverse all the numbers.
+        // Index i (0 <= i < n - k) becomes n - (n - k - i) = i + k.
+        // Index n - k + i (0 <= i < k) becomes n - (n - i) = i.
+        reverse(nums.begin(), nums.begin() + n);
     }
 };
 
